@@ -22,11 +22,13 @@ app.use((req, res, next)=>{
 })
 
 
-
+/*
 app.use ((req, res, next)=>{
 
 	res.render('maintenance.hbs');
 })
+*/
+
 // you will need to put this after the mainteance page, like this you will note have 
 // a html page active while your in maintenance 
 // this is how it is done, with order so maintenance before everything. 
@@ -60,6 +62,14 @@ app.get('/', (req, res) => {
 	})
 	
 	})
+
+app.get('/projects', (req, res)=>{
+	res.render('projects.hbs', {
+		pageTitle: 'Projects'
+	});
+})
+
+
 
 	app.get('/about', (req, res)=>{
 		res.render('about.hbs', {
